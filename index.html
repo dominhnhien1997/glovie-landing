@@ -306,6 +306,104 @@ footer{border-top:1.5px solid var(--ink);padding:34px 0;font-size:.92rem}
   .pill{padding:16px 22px;font-size:.88rem}
   .tk-switch button{padding:10px 16px}
 }
+
+/* ===== Fit each section to one screen (desktop) ===== */
+@media (min-width:1025px) and (min-height:600px){
+  html{scroll-snap-type:y mandatory;scroll-padding-top:0}
+  section{min-height:100vh;min-height:100svh;padding:calc(78px + 3vh) 0 4vh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start}
+  section>.wrap{width:100%}
+  footer{scroll-snap-align:end}
+  h1{font-size:min(3.7rem,7.4vh)}
+  h2{font-size:min(3.1rem,5.6vh)}
+  body{font-size:min(17px,2.15vh)}
+  .eyebrow{margin-bottom:1.4vh}
+  .quote-line{margin-top:3vh;font-size:min(1.15rem,2.3vh);padding-bottom:1.2vh}
+  /* hero */
+  .hero{padding-top:calc(78px + 3vh)}
+  .hero p.lead{margin-top:2.6vh}
+  .pill{margin-top:3vh;padding:2vh 30px}
+  .hero-cta{margin-top:2.6vh}
+  .hero-art{height:min(540px,62vh)}
+  /* context */
+  .ctx ul{margin-top:2.6vh;gap:1.6vh}
+  .domes{max-width:min(100%,72vh);margin:0 auto;width:100%}
+  /* stats */
+  .stat-row{margin-top:5vh}
+  .stat{padding:3.6vh 30px}
+  .stat .num{font-size:min(4rem,8vh)}
+  /* summary */
+  .halves{height:min(480px,58vh)}
+  .svc-list{margin-top:2.4vh;gap:1.2vh}
+  .svc-item{padding:1.6vh 20px}
+  .sum-grid p{margin-top:1.8vh !important}
+  /* pillars */
+  .pil-grid{margin-top:4vh}
+  .pil .img{height:min(220px,24vh)}
+  .pil .body{padding:2.6vh 26px}
+  .flow{margin-top:4vh}
+  /* solutions */
+  .sol-grid{margin-top:4vh}
+  .sol{padding:3.6vh 38px}
+  .sol h3{font-size:min(1.9rem,3.6vh)}
+  .sol .sub{margin:.8vh 0 2vh}
+  .sol ul{gap:1vh}
+  .sol .q{margin-top:2.2vh;padding-top:1.4vh}
+  /* compare */
+  .table{margin-top:4vh}
+  .trow>div{padding:1.9vh 28px}
+  /* levels */
+  .lv-grid{margin-top:4.5vh}
+  .lv{padding:3.4vh 30px}
+  .lv h3{margin:1.8vh 0 1.6vh}
+  .lv dl{gap:1.2vh}
+  /* services */
+  .tabs{margin-top:3.6vh}
+  .panel{margin-top:3vh;padding:4vh 44px}
+  /* clients */
+  .cl-grid{margin-top:5vh}
+  .cl{padding:3vh 22px}
+  /* process */
+  .steps{margin-top:3.6vh;gap:1.8vh 20px}
+  .step{padding:2.4vh 26px}
+  .step .no{font-size:min(2.6rem,5vh)}
+  .step h3{margin:1vh 0 .6vh}
+  .proc-art{height:min(460px,60vh)}
+  /* toolkit */
+  .tk-switch{margin-top:2.6vh}
+  .tk{margin-top:2.6vh;gap:1.8vh 22px}
+  .tool{padding:2.4vh 28px}
+  .tool h3{margin-bottom:1vh;font-size:min(1.15rem,2.3vh)}
+  .tool ul{margin-top:.8vh;gap:.4vh}
+  .tool li{font-size:min(.97rem,1.95vh)}
+  /* creative */
+  .creative{padding:0}
+  .creative .box{min-height:100vh;min-height:100svh;width:100%}
+  .creative .inner{padding:calc(78px + 4vh) 24px 6vh}
+  /* approach */
+  .ap-intro{margin-top:2.4vh}
+  .ap-grid{margin-top:4.5vh}
+  .ap{padding:3.4vh 26px}
+  /* team */
+  .member{margin-top:4.5vh !important}
+  .portrait{height:min(420px,56vh)}
+  .member h3{font-size:min(2rem,4vh)}
+  .member .role{margin:.6vh 0 1.8vh}
+  .creds{margin-top:2vh}
+  .brands{margin-top:1.6vh}
+  /* cta */
+  .cta{padding:calc(78px + 3vh) 0 4vh;min-height:calc(100vh - 110px)}
+  .cta h2{font-size:min(4.6rem,8.4vh)}
+  .cta p{margin:2.6vh auto 3.6vh}
+  .contact-cards{margin-top:4.5vh}
+  .cta .half{display:none}
+}
+/* dot nav */
+.dots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px}
+.dots a{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;transition:.25s;display:block}
+.dots a.on{background:var(--orange);border-color:var(--orange);transform:scale(1.3)}
+.dots.dark a{border-color:#fff}
+.dots.dark a.on{border-color:var(--orange)}
+@media (max-width:1024px),(max-height:599px){.dots{display:none}}
 </style>
 </head>
 <body>
@@ -617,6 +715,11 @@ footer{border-top:1.5px solid var(--ink);padding:34px 0;font-size:.92rem}
         <div class="creds"><span>Thạc sỹ Tài chính Ngân hàng</span><span>Cử nhân Kế toán Kiểm toán – HV Ngân hàng</span><span>Hội viên kỳ cựu ACCA</span><span>Tiểu ban cố vấn Thuế &amp; Pháp luật ACCA</span><span>Thành viên VACPA</span></div>
       </div>
     </div>
+  </div>
+</section>
+<section class="team team2">
+  <div class="wrap">
+    <h2 class="rv">Đội ngũ của Glovie</h2>
     <div class="member rev rv">
       <div class="portrait"><div class="ph"><img src="assets/khue.jpg" alt="Ông Đoàn Trắc Khuê"></div><div class="dc"></div></div>
       <div>
@@ -666,6 +769,13 @@ function count(el){const t=+el.dataset.count;let s=null;const f=ts=>{s=s||ts;con
 // tabs
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.p).classList.add('active')});
 document.querySelectorAll('.tk-switch button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tk-switch button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tk').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.t).classList.add('active')});
+// dot nav
+const secs=[...document.querySelectorAll('section')];
+const dots=document.createElement('nav');dots.className='dots';dots.setAttribute('aria-label','Chuyển phần');
+secs.forEach((sc,i)=>{const a=document.createElement('a');a.href='#';a.setAttribute('aria-label','Phần '+(i+1));a.onclick=e=>{e.preventDefault();sc.scrollIntoView({behavior:'smooth'})};dots.appendChild(a)});
+document.body.appendChild(dots);
+const dio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=secs.indexOf(e.target);[...dots.children].forEach((d,j)=>d.classList.toggle('on',i===j));dots.classList.toggle('dark',/pillars|clients|creative/.test(e.target.className))}}),{threshold:.55});
+secs.forEach(sc=>dio.observe(sc));
 </script>
 </body>
 </html>
