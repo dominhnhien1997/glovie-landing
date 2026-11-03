@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glovie Consulting – Tối Ưu Tài Sản, Giảm Thiểu Rủi Ro</title>
+<meta name="description" content="Glovie Consulting JSC – Tư vấn Tối ưu Thuế, Chiến lược & Quản trị Tài chính. Prevent. Protect. Prosper.">
+<meta property="og:title" content="Glovie Consulting – Tối Ưu Tài Sản, Giảm Thiểu Rủi Ro">
+<meta property="og:description" content="Giúp doanh nghiệp tiết kiệm hàng trăm tỷ tiền thuế mà vẫn tuân thủ pháp luật.">
+<meta property="og:image" content="assets/landmark.jpg">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#E48946; --orange-d:#C9702F; --orange-soft:#FBEDE2;
+  --gold:#C99A5B; --ink:#0B0B0B; --text:#2A2A2A; --muted:#6B6B6B;
+  --line:#E6E6E6; --bg:#FFFFFF; --bg-alt:#F7F7F7;
+  --maxw:1200px; --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.08;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,4.4vw,3.7rem);font-weight:900}
+h2{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800}
+h3{font-size:1.3rem;font-weight:700}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:110px 0;position:relative}
+.eyebrow{font-size:.95rem;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--orange);flex:none}
+.quote-line{font-style:italic;font-weight:300;font-size:1.2rem;color:var(--ink);padding-bottom:14px;border-bottom:1.5px solid var(--ink);display:inline-block;margin-top:44px}
+.orange{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;font-weight:600;padding:16px 30px;border-radius:999px;transition:.25s;font-size:1rem;border:2px solid var(--orange)}
+.btn:hover{background:var(--orange-d);border-color:var(--orange-d);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+/* deco */
+.burst{width:110px;height:110px;position:absolute;pointer-events:none}
+.rings{position:absolute;pointer-events:none}
+.half{position:absolute;background:var(--orange);border-radius:999px 999px 0 0;pointer-events:none}
+.half.outline{background:var(--bg-alt);border:1.5px solid var(--ink);border-bottom:none}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:46px;height:46px;object-fit:contain}
+.brand b{font-family:"Archivo";font-weight:800;font-size:1.05rem;color:var(--ink);display:block;line-height:1.1}
+.brand small{font-size:.8rem;color:var(--muted)}
+.menu{display:flex;gap:30px;font-size:.95rem;font-weight:500}
+.menu a{position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--orange);transition:.25s}
+.menu a:hover::after{width:100%}
+.nav .btn{padding:11px 22px;font-size:.92rem}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:7px 6px;transition:.3s}
+
+/* hero */
+.hero{padding:160px 0 90px;min-height:100vh;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.hero .tag{font-family:"Archivo";font-weight:800;color:var(--ink);font-size:1.05rem;display:flex;gap:10px;align-items:center}
+.hero .tag::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--orange)}
+.hero .slogan{margin:4px 0 30px 24px;color:var(--muted)}
+.hero p.lead{margin-top:28px;font-size:1.12rem;max-width:620px}
+.hero p.lead b{color:var(--ink)}
+.pill{margin-top:34px;background:var(--orange);color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:.02em;border-radius:40px;padding:20px 34px;font-size:.98rem;line-height:1.5;max-width:620px}
+.hero-cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.hero-art{position:relative;height:540px;display:flex;align-items:center}
+.hero-art .photo{width:50%;height:100%;border-radius:0 999px 999px 0;overflow:hidden;position:relative;z-index:2}
+.hero-art .photo img{width:100%;height:100%;object-fit:cover}
+.hero-art .disc{width:50%;height:100%;background:var(--orange);border-radius:999px 0 0 999px;margin-left:2%}
+.hero-art .logo-big{position:absolute;top:-30px;right:0;width:130px;z-index:3}
+
+/* context */
+.ctx-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.ctx ul{margin-top:30px;list-style:none;display:grid;gap:18px}
+.ctx li{padding-left:30px;position:relative}
+.ctx li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+.domes{display:flex;flex-direction:column;align-items:center}
+.domes .d1{width:100%;aspect-ratio:2/1;border-radius:999px 999px 0 0;overflow:hidden}
+.domes .d2{width:86%;aspect-ratio:2/1;border-radius:999px 999px 0 0;overflow:hidden;margin-top:4px}
+.domes img{width:100%;height:100%;object-fit:cover}
+
+/* stats */
+.stats{background:var(--bg-alt)}
+.stats-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.stat{background:#fff;border-radius:var(--r);padding:36px 30px;border:1px solid var(--line);position:relative;overflow:hidden;transition:.3s}
+.stat:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(0,0,0,.18)}
+.stat .num{font-family:"Archivo";font-weight:900;font-size:4rem;color:var(--orange);line-height:1}
+.stat p{margin-top:14px}
+.stat::after{content:"";position:absolute;right:-40px;bottom:-40px;width:110px;height:110px;border-radius:50%;background:var(--orange-soft)}
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;font-size:.92rem}
+.chain span{background:var(--orange-soft);color:var(--orange-d);padding:4px 12px;border-radius:999px;font-weight:500}
+
+/* summary */
+.sum-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.halves{display:flex;height:480px}
+.halves .a{width:50%;background:var(--orange);border-radius:999px 0 0 999px}
+.halves .b{width:50%;border-radius:0 999px 999px 0;overflow:hidden}
+.halves .b img{width:100%;height:100%;object-fit:cover}
+.svc-list{margin-top:30px;display:grid;gap:14px}
+.svc-item{display:flex;gap:18px;padding:20px 22px;border:1px solid var(--line);border-radius:16px;transition:.25s}
+.svc-item:hover{border-color:var(--orange);background:var(--orange-soft)}
+.svc-item .ico{flex:none;width:44px;height:44px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-family:"Archivo";font-weight:800}
+.svc-item b{color:var(--ink);display:block;margin-bottom:2px}
+
+/* pillars */
+.pillars{background:var(--ink);color:#ddd}
+.pillars h2,.pillars h3{color:#fff}
+.pillars .eyebrow{color:#aaa}
+.pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.pil{border-radius:var(--r);overflow:hidden;background:#161616;border:1px solid #262626;transition:.3s}
+.pil:hover{transform:translateY(-6px);border-color:var(--orange)}
+.pil .img{height:220px;overflow:hidden}
+.pil .img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.pil:hover .img img{transform:scale(1.06)}
+.pil .body{padding:28px}
+.pil .k{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.pil h3{margin:8px 0 10px}
+.flow{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:56px;font-style:italic;font-size:1.25rem;color:#fff;flex-wrap:wrap}
+.flow i{color:var(--orange);font-style:normal}
+
+/* solutions */
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:60px}
+.sol{border-radius:28px;padding:44px;border:1px solid var(--line);position:relative;overflow:hidden}
+.sol.alt{background:var(--orange);color:#fff;border-color:var(--orange)}
+.sol.alt h3,.sol.alt .sub{color:#fff}
+.sol h3{font-size:1.9rem}
+.sol .sub{color:var(--muted);margin:8px 0 22px}
+.sol ul{list-style:none;display:grid;gap:12px}
+.sol li{padding-left:28px;position:relative}
+.sol li::before{content:"✓";position:absolute;left:0;font-weight:700;color:var(--orange)}
+.sol.alt li::before{color:#fff}
+.sol .q{margin-top:28px;font-style:italic;font-weight:300;border-top:1px solid currentColor;padding-top:16px;opacity:.95}
+.sol .dome{position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;overflow:hidden;opacity:.18}
+
+/* compare */
+.compare{background:var(--bg-alt)}
+.table{margin-top:50px;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:1fr 1.3fr 1.3fr}
+.trow>div{padding:22px 28px;border-bottom:1px solid var(--line)}
+.trow:last-child>div{border-bottom:0}
+.trow.head>div{font-family:"Archivo";font-weight:800;text-transform:uppercase;font-size:.92rem;color:var(--ink);background:#fff}
+.trow.head>div:last-child{background:var(--orange);color:#fff}
+.trow .asp{color:var(--orange);font-weight:700;font-family:"Archivo"}
+.trow .old{color:var(--muted);text-decoration:line-through;text-decoration-color:#ccc}
+.trow .new{background:var(--orange-soft);color:var(--ink);font-weight:600}
+
+/* levels */
+.lv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.lv{border-radius:var(--r);padding:36px 30px;border:1px solid var(--line);position:relative;background:#fff;transition:.3s}
+.lv:hover{border-color:var(--orange);transform:translateY(-4px)}
+.lv .n{font-family:"Archivo";font-weight:900;font-size:.9rem;color:#fff;background:var(--ink);width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.lv:nth-child(2) .n{background:var(--orange)}
+.lv h3{color:var(--orange);margin:20px 0 18px;font-size:1.5rem}
+.lv dl{display:grid;gap:14px}
+.lv dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.lv dd{color:var(--ink)}
+
+/* typical services */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px}
+.tab{border:1.5px solid var(--ink);background:none;border-radius:999px;padding:11px 22px;font:inherit;font-weight:500;cursor:pointer;transition:.2s;color:var(--ink)}
+.tab.active,.tab:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px;padding:44px;border-radius:28px;background:var(--bg-alt);animation:fade .4s}
+.panel.active{display:grid}
+.panel h4{font-family:"Archivo";text-transform:uppercase;font-size:.88rem;letter-spacing:.06em;margin-bottom:14px;color:var(--ink)}
+.panel p+p{margin-top:14px}
+.panel .impact{border-left:3px solid var(--orange);padding-left:24px}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* clients */
+.clients{background:var(--ink);color:#ccc}
+.clients h2{color:#fff}
+.clients .eyebrow{color:#aaa}
+.cl-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:56px}
+.cl{border:1px solid #2a2a2a;border-radius:18px;padding:26px 22px;background:#151515;transition:.3s;display:flex;flex-direction:column}
+.cl:hover{border-color:var(--orange);background:#1b1410}
+.cl h3{color:var(--orange);font-size:1.12rem;min-height:2.6em}
+.cl .need{color:#fff;font-weight:500;margin:14px 0 auto;font-size:.97rem}
+.cl .imp{margin-top:18px;padding-top:14px;border-top:1px dashed #333;font-size:.9rem}
+
+/* process */
+.proc-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px;counter-reset:s}
+.step{padding:28px;border-radius:var(--r);border:1px solid var(--line);position:relative;transition:.3s}
+.step:hover{border-color:var(--orange)}
+.step .no{font-family:"Archivo";font-weight:900;font-size:2.6rem;color:var(--orange-soft);-webkit-text-stroke:1.5px var(--orange);line-height:1}
+.step h3{margin:12px 0 8px;font-size:1.15rem}
+.proc-art{position:relative;height:460px}
+.proc-art .h1{position:absolute;top:0;right:0;width:100%;height:50%;background:var(--orange);border-radius:999px 999px 0 0}
+.proc-art .h2{position:absolute;bottom:0;right:0;width:100%;height:50%;border-radius:999px 999px 0 0;overflow:hidden;border:1.5px solid var(--ink);border-bottom:0}
+.proc-art .h2 img{width:100%;height:100%;object-fit:cover}
+
+/* toolkit */
+.toolkit{background:var(--bg-alt)}
+.tk-switch{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px;margin-top:36px}
+.tk-switch button{border:0;background:none;font:inherit;font-weight:600;padding:12px 26px;border-radius:999px;cursor:pointer;color:var(--ink);transition:.2s}
+.tk-switch button.active{background:var(--ink);color:#fff}
+.tk{display:none;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px;animation:fade .4s}
+.tk.active{display:grid}
+.tool{background:#fff;border-radius:var(--r);padding:32px;border:1px solid var(--line)}
+.tool h3{font-size:1.15rem;margin-bottom:12px;display:flex;gap:12px;align-items:baseline}
+.tool h3 em{font-style:normal;color:var(--orange);font-family:"Archivo";font-weight:900}
+.tool ul{list-style:none;margin-top:10px;display:grid;gap:8px}
+.tool li{padding-left:20px;position:relative;font-size:.97rem}
+.tool li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;background:var(--orange);border-radius:50%}
+
+/* creativity */
+.creative{padding:0}
+.creative .box{position:relative;border-radius:0;overflow:hidden;min-height:520px;display:flex;align-items:center}
+.creative .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.creative .box::before{content:"";position:absolute;inset:0;background:var(--orange);mix-blend-mode:multiply;opacity:.92;z-index:1}
+.creative .box::after{content:"";position:absolute;inset:0;background:rgba(228,137,70,.55);z-index:1}
+.creative .inner{position:relative;z-index:2;padding:100px 24px;max-width:1000px;margin:0 auto;color:#fff}
+.creative h2{color:#fff;margin-bottom:34px}
+.creative blockquote{font-size:clamp(1.25rem,2.4vw,1.75rem);font-weight:300;line-height:1.6}
+
+/* approach */
+.ap-intro{max-width:900px;margin-top:24px;font-size:1.05rem}
+.ap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px}
+.ap{padding:32px 26px;border-radius:var(--r);border:1px solid var(--line);transition:.3s}
+.ap:nth-child(odd){background:var(--orange);color:#fff;border-color:var(--orange)}
+.ap:nth-child(odd) h3{color:#fff}
+.ap:hover{transform:translateY(-5px)}
+.ap .icon{font-size:1.8rem;margin-bottom:14px}
+.ap h3{margin-bottom:10px;font-size:1.2rem}
+
+/* team */
+.team{background:var(--bg-alt)}
+.member{display:grid;grid-template-columns:340px 1fr;gap:60px;align-items:center;margin-top:60px}
+.member+.member{margin-top:80px}
+.member.rev{grid-template-columns:1fr 340px}
+.member.rev .portrait{order:2}
+.portrait{position:relative;height:420px;display:flex}
+.portrait .ph{width:62%;height:100%;border-radius:999px 0 0 999px;overflow:hidden;z-index:2}
+.portrait .ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.portrait .dc{width:38%;height:100%;background:var(--orange);border-radius:0 999px 999px 0}
+.member .role{color:var(--orange);font-weight:600;margin:6px 0 20px}
+.member h3{font-size:2rem}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.creds span{background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.88rem}
+.brands{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.brands b{font-family:"Archivo";font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--orange);padding-bottom:2px}
+
+/* cta */
+.cta{text-align:center;padding:130px 0;overflow:hidden}
+.cta h2{font-size:clamp(2.6rem,6vw,4.8rem)}
+.cta p{max-width:720px;margin:24px auto 40px;font-size:1.2rem}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:50px auto 0;text-align:left}
+.cc{border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s;display:block}
+.cc:hover{border-color:var(--orange);background:var(--orange-soft)}
+.cc small{color:var(--muted);display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+.cc b{color:var(--ink);font-size:1.08rem;word-break:break-word}
+
+footer{border-top:1.5px solid var(--ink);padding:34px 0;font-size:.92rem}
+.foot{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:center}
+.foot>div:nth-child(2){text-align:center}
+.foot>div:last-child{text-align:right}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:1024px){
+  .menu{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:#fff;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
+  .nav .btn{display:none}
+  .hero-grid,.ctx-grid,.sum-grid,.proc-grid,.stats-head{grid-template-columns:1fr}
+  .hero-art{height:380px;max-width:520px}
+  .cl-grid{grid-template-columns:repeat(2,1fr)}
+  .ap-grid{grid-template-columns:repeat(2,1fr)}
+  .halves{height:360px;max-width:460px}
+  .proc-art{display:none}
+  .member,.member.rev{grid-template-columns:1fr;gap:30px}
+  .member.rev .portrait{order:0}
+  .portrait{max-width:340px;height:380px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  section{padding:76px 0}
+  .wrap{padding:0 16px}
+  .hero{padding-top:120px}
+  .hero-art{height:300px}
+  .hero-art .logo-big{width:90px;top:-10px}
+  .stat-row,.pil-grid,.sol-grid,.lv-grid,.steps,.tk,.contact-cards,.cl-grid,.ap-grid{grid-template-columns:1fr}
+  .tk.active{display:grid}
+  .panel.active{grid-template-columns:1fr;padding:26px}
+  .sol{padding:30px}
+  .trow{grid-template-columns:1fr 1fr}
+  .trow>div:first-child{grid-column:1/-1;padding-bottom:4px;border-bottom:0}
+  .trow.head>div:first-child{display:none}
+  .trow>div{padding:14px 18px}
+  .foot{grid-template-columns:1fr;text-align:center}
+  .foot>div:last-child{text-align:center}
+  .burst{display:none}
+  .pill{padding:16px 22px;font-size:.88rem}
+  .tk-switch button{padding:10px 16px}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="brand">
+      <img src="assets/logo.jpg" alt="Glovie logo">
+      <span><b>GLOVIE CONSULTING</b><small>Prevent. Protect. Prosper.</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about">Giới thiệu</a>
+      <a href="#pillars">Trụ cột</a>
+      <a href="#services">Dịch vụ</a>
+      <a href="#process">Quy trình</a>
+      <a href="#team">Đội ngũ</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <a href="#contact" class="btn">Đặt lịch tư vấn</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tag">GLOVIE – THYNK UNLIMITED</div>
+      <div class="slogan">Prevent. Protect. Prosper.</div>
+      <h1>Tối Ưu Tài Sản<span class="orange"> –</span><br>Giảm Thiểu Rủi Ro</h1>
+      <p class="lead">Công ty Cổ phần Tư vấn Glovie là đơn vị chuyên nghiệp trong các lĩnh vực <b>Tư vấn Tối ưu Thuế</b>, Tư vấn Chiến lược &amp; Quản trị Tài chính — giúp doanh nghiệp <b>tiết kiệm đến hàng trăm tỷ tiền thuế</b> mà vẫn đảm bảo tuân thủ pháp luật.</p>
+      <div class="pill">Bảo vệ sự nghiệp – Tối ưu giá trị – Quản trị rủi ro thuế và pháp lý</div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Khám sức khỏe thuế ngay →</a>
+        <a href="#services" class="btn ghost">Xem dịch vụ</a>
+      </div>
+    </div>
+    <div class="hero-art rv">
+      <div class="photo"><img src="assets/landmark.jpg" alt="Landmark 81 lúc hoàng hôn"></div>
+      <div class="disc"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXT -->
+<section class="ctx" id="about">
+  <svg class="burst" style="top:60px;right:6%" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width=".8"><g id="b"><line x1="50" y1="2" x2="50" y2="98"/><line x1="2" y1="50" x2="98" y2="50"/><line x1="16" y1="16" x2="84" y2="84"/><line x1="84" y1="16" x2="16" y2="84"/><line x1="30" y1="5" x2="70" y2="95"/><line x1="70" y1="5" x2="30" y2="95"/><line x1="5" y1="30" x2="95" y2="70"/><line x1="5" y1="70" x2="95" y2="30"/></g></svg>
+  <div class="wrap ctx-grid">
+    <div class="rv">
+      <div class="eyebrow">Bối cảnh &amp; Thách thức mới</div>
+      <h2>Thế giới thay đổi nhanh hơn hệ thống quản trị của bạn.</h2>
+      <ul>
+        <li>Luật pháp &amp; thuế biến động liên tục, rủi ro truy thu &amp; xử lý hình sự gia tăng.</li>
+        <li>Doanh nghiệp phát triển nhanh hơn khả năng kiểm soát rủi ro. Nhân sự nội bộ không thể nắm bắt hết các quy định pháp luật cùng chế độ ưu đãi liên quan.</li>
+        <li>Nhiều cá nhân &amp; lãnh đạo mất hàng chục năm gây dựng – nhưng gục ngã vì sai sót pháp lý nhỏ.</li>
+      </ul>
+      <div class="quote-line">Rủi ro không chỉ đến từ việc làm sai – mà đến từ việc không biết mình đang làm gì sai.</div>
+    </div>
+    <div class="domes rv">
+      <div class="d1"><img src="assets/globe.jpg" alt="Địa cầu chuyển động"></div>
+      <div class="d2"><img src="assets/highway.jpg" alt="Giao thông tốc độ cao"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-head rv">
+      <h2>Tại sao cần “Khám sức khỏe tài chính, thuế &amp; pháp lý”?</h2>
+      <p style="font-style:italic;font-size:1.15rem">Giống như khám sức khỏe định kỳ, kiểm tra thuế – pháp lý định kỳ giúp bạn sống sót trong hệ thống phức tạp.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat rv"><div class="num" data-count="80">80%</div><p>doanh nghiệp chưa từng được “soát xét sức khỏe” toàn diện về thuế – pháp lý.</p></div>
+      <div class="stat rv"><div class="num" data-count="60">60%</div><p>các vụ việc truy thu thuế xuất phát từ sai phạm vô ý, không cố tình.</p></div>
+      <div class="stat rv"><div class="num">1 lỗi</div><p>nhỏ có thể gây hiệu ứng dây chuyền:</p>
+        <div class="chain"><span>Truy thu</span>→<span>Phạt</span>→<span>Mất uy tín</span>→<span>Mất cơ hội đầu tư</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section>
+  <div class="wrap sum-grid">
+    <div class="halves rv"><div class="a"></div><div class="b"><img src="assets/glass.jpg" alt="Tòa nhà kính"></div></div>
+    <div class="rv">
+      <div class="eyebrow">Executive Summary</div>
+      <h2>Sự nghiệp có thể đổ vỡ vì một sai lầm pháp lý hoặc thuế vụ.</h2>
+      <p style="margin-top:22px">Glovie Consulting giúp doanh nghiệp và cá nhân <b>nhìn thấy – hiểu – kiểm soát</b> những rủi ro tiềm ẩn trước khi chúng trở thành khủng hoảng.</p>
+      <div class="svc-list">
+        <div class="svc-item"><div class="ico">01</div><div><b>Soát xét Thuế &amp; Pháp lý</b>Khám sức khỏe tài chính kế toán, hoạt động thuế và các hoạt động liên quan với khuôn khổ pháp lý toàn diện.</div></div>
+        <div class="svc-item"><div class="ico">02</div><div><b>Quản trị rủi ro &amp; Tối ưu Thuế</b>Rà soát công tác thuế đã và sẽ phát sinh. Lập kế hoạch thuế mới, quản trị rủi ro &amp; bảo vệ giá trị.</div></div>
+        <div class="svc-item"><div class="ico">03</div><div><b>Tối ưu cấu trúc &amp; lợi nhuận hợp pháp</b>Tái cấu trúc hoạt động và tổ chức doanh nghiệp cùng kế hoạch tài chính mới.</div></div>
+      </div>
+      <div class="quote-line">Glovie – Turning risk into resilience, and compliance into value.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Lợi ích khi “khám sức khỏe” với Glovie</div>
+      <h2>Ba trụ cột sứ mệnh của Glovie Consulting JSC</h2>
+    </div>
+    <div class="pil-grid">
+      <div class="pil rv"><div class="img"><img src="assets/landmark.jpg" alt="" style="object-position:center 30%"></div><div class="body"><div class="k">🩺 Phòng ngừa</div><h3>Financial Health Check</h3><p>Kiểm tra sức khỏe thuế – pháp lý – tài chính để phát hiện sớm “căn bệnh tiềm ẩn”.</p></div></div>
+      <div class="pil rv"><div class="img"><img src="assets/shield.jpg" alt=""></div><div class="body"><div class="k">⚖️ Bảo vệ</div><h3>Risk Management &amp; Protection</h3><p>Phân tích, đánh giá và quản trị rủi ro tuân thủ để tránh thiệt hại và mất uy tín.</p></div></div>
+      <div class="pil rv"><div class="img"><img src="assets/wind.jpg" alt=""></div><div class="body"><div class="k">🚀 Tối ưu</div><h3>Value Optimization</h3><p>Tái cấu trúc, tận dụng ưu đãi và tối ưu hiệu quả vốn để tăng trưởng bền vững.</p></div></div>
+    </div>
+    <div class="flow rv">Từ phòng ngừa <i>→</i> bảo vệ <i>→</i> tối ưu hóa giá trị.</div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section>
+  <svg class="rings" style="top:70px;right:8%" width="120" height="70" viewBox="0 0 120 70" fill="none" stroke="#111" stroke-width="1"><circle cx="40" cy="35" r="32"/><circle cx="80" cy="35" r="32"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Giải pháp trọng tâm</div>
+      <h2>Kiểm soát rủi ro. Gia tăng giá trị thật.</h2>
+    </div>
+    <div class="sol-grid">
+      <div class="sol rv">
+        <h3>Quản trị Rủi ro &amp; Bảo vệ Giá trị</h3>
+        <div class="sub">Giải pháp “Risk Shield” của Glovie</div>
+        <ul>
+          <li>Phân tích rủi ro truy thu, vi phạm, và khả năng hình sự hóa.</li>
+          <li>Đánh giá tính tuân thủ hệ thống sổ sách, hợp đồng, giao dịch.</li>
+          <li>Thiết kế cơ chế bảo vệ tài sản &amp; thương hiệu lãnh đạo.</li>
+          <li>Hướng dẫn làm việc chiến lược với thanh tra thuế và cơ quan chức năng.</li>
+          <li>Giúp lãnh đạo nhìn thấy bức tranh tổng thể, giảm rủi ro dài hạn và xây dựng năng lực quản trị bền vững.</li>
+        </ul>
+        <div class="q">Rủi ro không thể loại bỏ, nhưng có thể kiểm soát và định lượng được.</div>
+      </div>
+      <div class="sol alt rv">
+        <h3>Tối ưu Giá trị – Value Optimization</h3>
+        <div class="sub">Giải pháp Tối ưu Thuế: Tối ưu hợp pháp – Tăng giá trị thật.</div>
+        <ul>
+          <li>Tận dụng các ưu đãi thuế, chính sách ngành, hiệp định quốc tế.</li>
+          <li>Tái cấu trúc sở hữu, dòng tiền, và hợp đồng để tối đa hiệu quả vốn.</li>
+          <li>Giảm chi phí không hiệu quả và nâng tỷ suất sinh lời sau thuế.</li>
+          <li>Đảm bảo tính minh bạch &amp; sẵn sàng cho kiểm toán, M&amp;A, IPO.</li>
+        </ul>
+        <div class="q">Chúng tôi không giúp bạn trả ít thuế – chúng tôi giúp bạn sinh lời nhiều hơn từ thuế.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare">
+  <div class="wrap">
+    <h2 class="rv">Giá trị cốt lõi &amp; bền vững mang đến cho khách hàng</h2>
+    <div class="table rv">
+      <div class="trow head"><div>Khía cạnh</div><div>Cách làm DN truyền thống</div><div>Cách làm của Glovie</div></div>
+      <div class="trow"><div class="asp">Tư duy</div><div class="old">Giảm thuế tức thời</div><div class="new">Tối ưu vốn dài hạn</div></div>
+      <div class="trow"><div class="asp">Phương pháp</div><div class="old">Dựa trên kế toán</div><div class="new">Dựa trên chiến lược và dữ liệu</div></div>
+      <div class="trow"><div class="asp">Tuân thủ</div><div class="old">Thụ động – phản ứng</div><div class="new">Chủ động – phòng ngừa</div></div>
+      <div class="trow"><div class="asp">Kết quả</div><div class="old">Tránh bị phạt</div><div class="new">Tạo giá trị bền vững</div></div>
+      <div class="trow"><div class="asp">Vai trò tư vấn</div><div class="old">Kế toán viên &amp; CFO nội bộ</div><div class="new">Cố vấn chiến lược</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section>
+  <div class="half" style="width:200px;height:100px;top:80px;right:0;border-radius:999px 0 0 0"></div>
+  <div class="wrap">
+    <h2 class="rv">Ba cấp độ trong dịch vụ của Glovie Consulting</h2>
+    <div class="lv-grid">
+      <div class="lv rv"><div class="n">01</div><h3>Health Check</h3><dl><dt>Mục tiêu</dt><dd>Phát hiện rủi ro</dd><dt>Đối tượng</dt><dd>Doanh nghiệp, cá nhân có tài sản, thu nhập cao.</dd><dt>Kết quả đầu ra</dt><dd>Báo cáo rủi ro &amp; điểm yếu và đề xuất giải pháp.</dd></dl></div>
+      <div class="lv rv"><div class="n">02</div><h3>Risk Management</h3><dl><dt>Mục tiêu</dt><dd>Bảo vệ &amp; phòng ngừa</dd><dt>Đối tượng</dt><dd>Doanh nghiệp quy mô trung – lớn, tập đoàn &amp; hệ sinh thái.</dd><dt>Kết quả đầu ra</dt><dd>Cơ chế kiểm soát &amp; kế hoạch xử lý và giải pháp.</dd></dl></div>
+      <div class="lv rv"><div class="n">03</div><h3>Value Optimization</h3><dl><dt>Mục tiêu</dt><dd>Gia tăng giá trị &amp; hiệu quả</dd><dt>Đối tượng</dt><dd>Tập đoàn, chủ đầu tư, HNWIs.</dd><dt>Kết quả đầu ra</dt><dd>Cấu trúc tối ưu, lợi nhuận bền vững.</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPICAL SERVICES -->
+<section style="padding-top:20px" id="services">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Dịch vụ tiêu biểu</div>
+      <h2>Bảo vệ, tối ưu hóa tài sản và tiền thuế</h2>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-p="p1">Tối ưu hóa tài sản &amp; thuế</button>
+      <button class="tab" data-p="p2">Soát xét thuế</button>
+      <button class="tab" data-p="p3">Tư vấn thuế thường xuyên</button>
+      <button class="tab" data-p="p4">Tư vấn chiến lược</button>
+    </div>
+    <div class="panel active" id="p1">
+      <div><h4>Nội dung</h4><p>Vận dụng quy định pháp luật kết hợp với việc lập chiến lược dài hạn về thuế và đặc thù về thuế và ngành kinh doanh nhằm giảm thiểu chi phí về thuế một cách hợp pháp, trong khuôn khổ hệ thống pháp luật kinh tế.</p><p>Việc tối ưu hoá nhằm giúp doanh nghiệp có lợi nhuận cao và phát triển bền vững.</p></div>
+      <div class="impact"><h4>Tác động mang lại</h4><p>Đảm bảo tính hợp pháp và tránh các rủi ro pháp lý về các khoản thuế và đặc biệt là “tối ưu giá trị tài sản” doanh nghiệp giữ lại được để tái đầu tư vào hoạt động sản xuất kinh doanh <b>lên tới hàng trăm tỷ đồng</b>.</p></div>
+    </div>
+    <div class="panel" id="p2">
+      <div><h4>Nội dung</h4><p>Soát xét toàn diện về các sắc thuế chính bao gồm TNDN, GTGT, TNCN và NTNN.</p><p>Soát xét toàn diện từ các Tờ khai thuế, Bảng tính thuế đến các Chứng từ kế toán của khách hàng.</p></div>
+      <div class="impact"><h4>Tác động mang lại</h4><p>Xác định và chỉ ra các vấn đề hoặc rủi ro về thuế, đánh giá mức độ rủi ro về cả mặt định lượng và định tính để khách hàng nắm bắt được tình hình.</p><p>Khuyến nghị hướng khắc phục các rủi ro được xác định, bao gồm việc hoàn thiện hồ sơ và bổ sung các điều chỉnh cho tờ khai thuế nếu cần thiết.</p></div>
+    </div>
+    <div class="panel" id="p3">
+      <div><h4>Nội dung</h4><p>Dịch vụ tư vấn thuế thường xuyên đáp ứng nhu cầu được tư vấn thường xuyên về thuế và các vấn đề liên quan đến thuế (bao gồm chuyển giá, kế toán, hải quan…) có thể phát sinh trong hoạt động hàng ngày của khách hàng.</p></div>
+      <div class="impact"><h4>Tác động mang lại</h4><p>Giải đáp các câu hỏi ngắn gọn qua điện thoại và email về việc áp dụng pháp luật thuế và các quy định liên quan đến hoạt động kinh doanh.</p><p>Cập nhật và phân tích các thay đổi trong quy định pháp luật, quy định về thuế có ảnh hưởng tới hoạt động kinh doanh của khách hàng, đảm bảo tối ưu giá trị khi phản ánh nghiệp vụ kinh tế phát sinh.</p></div>
+    </div>
+    <div class="panel" id="p4">
+      <div><h4>Nội dung</h4><p>Cung cấp góc nhìn tổng thể với cách tiếp cận <b>“đa chiều”</b> và dựa trên <b>“dữ liệu”</b> cho các mục tiêu của doanh nghiệp: nghiên cứu thị trường, xây dựng mô hình kinh doanh, tái cấu trúc doanh nghiệp, kêu gọi vốn đầu tư, M&amp;A hoặc chuyển dịch tài sản và đầu tư ra nước ngoài.</p></div>
+      <div class="impact"><h4>Tác động mang lại</h4><p>Giúp doanh nghiệp ra quyết định đúng dựa trên dữ liệu, xác định rõ trọng tâm tăng trưởng, nâng cấp mô hình kinh doanh và cấu trúc tổ chức, nâng cao khả năng gọi vốn, M&amp;A và mở rộng ra thị trường quốc tế.</p><p>Quan trọng hơn, giúp lãnh đạo nhìn thấy bức tranh tổng thể, hiểu rõ các đánh đổi chiến lược và xây dựng năng lực quản trị bền vững.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Chúng tôi phục vụ ai</div>
+      <h2>Các loại hình khách hàng và dịch vụ minh họa</h2>
+    </div>
+    <div class="cl-grid">
+      <div class="cl rv"><h3>Cá nhân thu nhập cao</h3><div class="need">Bảo vệ tài sản, tối ưu thu nhập</div><div class="imp">Giảm thuế TNCN hợp pháp phải đóng</div></div>
+      <div class="cl rv"><h3>Gia tộc sở hữu hệ sinh thái</h3><div class="need">Cấu trúc giao dịch &amp; kế thừa</div><div class="imp">Giữ vững tài sản – giảm rủi ro pháp lý</div></div>
+      <div class="cl rv"><h3>Doanh nghiệp tư nhân</h3><div class="need">Kiểm soát rủi ro &amp; dòng tiền</div><div class="imp">Tránh truy thu hàng trăm tỷ đồng</div></div>
+      <div class="cl rv"><h3>Đầu tư / Khởi nghiệp</h3><div class="need">Đầu tư, Gọi vốn, M&amp;A</div><div class="imp">Chuẩn chỉnh hệ thống &amp; định giá tối ưu</div></div>
+      <div class="cl rv"><h3>Hệ sinh thái</h3><div class="need">Chuẩn bị IPO / M&amp;A</div><div class="imp">Chuẩn chỉnh hệ thống, tối ưu chi phí và gia tăng định giá doanh nghiệp</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap proc-grid">
+    <div>
+      <h2 class="rv">Quy trình cung cấp dịch vụ</h2>
+      <div class="steps">
+        <div class="step rv"><div class="no">01</div><h3>Screening &amp; Proposal</h3><p>Thu thập dữ liệu, rà soát nhanh rủi ro nổi bật. Đề xuất dịch vụ.</p></div>
+        <div class="step rv"><div class="no">02</div><h3>Diagnosis</h3><p>Phân tích sâu 4 trụ: thuế, pháp lý, tài chính, vận hành.</p></div>
+        <div class="step rv"><div class="no">03</div><h3>Mapping &amp; Treatment Plan</h3><p>Xây dựng bản đồ rủi ro – chỉ rõ điểm yếu và mức độ ảnh hưởng. Đưa ra khuyến nghị &amp; kế hoạch khắc phục.</p></div>
+        <div class="step rv"><div class="no">04</div><h3>Prevention</h3><p>Triển khai và thiết lập quy trình kiểm soát để phòng ngừa tái phát.</p></div>
+      </div>
+      <div class="quote-line rv">Kết quả: Báo cáo “Sức khỏe pháp lý &amp; tài chính” – bản chẩn đoán cho sự bền vững của doanh nghiệp.</div>
+    </div>
+    <div class="proc-art rv"><div class="h1"></div><div class="h2"><img src="assets/quality.jpg" alt="La bàn chất lượng"></div></div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section class="toolkit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Các bộ công cụ áp dụng</div>
+      <h2>Bộ công cụ tối ưu thuế của Glovie</h2>
+    </div>
+    <div class="tk-switch">
+      <button class="active" data-t="t1">“Cơ Bản”</button>
+      <button data-t="t2">“Nâng Cao”</button>
+    </div>
+    <div class="tk active" id="t1">
+      <div class="tool"><h3><em>01</em>Tận dụng tối ưu lợi thế về thời gian</h3><p>Điều chỉnh thu nhập chịu thuế giữa các năm tài chính để:</p><ul><li>Tối ưu khoản thu nhập được ưu đãi thuế</li><li>Tối ưu dòng tiền nộp thuế (hoãn lại thuế)</li></ul></div>
+      <div class="tool"><h3><em>02</em>Sử dụng công cụ kế toán</h3><p>Điều chỉnh các ước tính kế toán trong phạm vi được cho phép, VD: thời gian khấu hao, trích lập các loại dự phòng…</p></div>
+      <div class="tool"><h3><em>03</em>Tận dụng các Ưu đãi thuế &amp; chính sách chính đáng</h3><ul><li>TNDN: ưu đãi theo địa bàn, ngành nghề…</li><li>GTGT: ưu đãi theo loại sản phẩm, dịch vụ</li><li>TNCN: ưu đãi theo loại thu nhập</li><li>Nhà thầu: ưu đãi theo Hiệp định tránh đánh thuế hai lần</li><li>Xuất nhập khẩu: ưu đãi theo loại hàng hóa, xuất xứ, Hiệp định phi thuế quan…</li><li>Thuế khác: tùy trường hợp (VD ưu đãi thuế trước bạ cho xe điện…)</li></ul></div>
+      <div class="tool"><h3><em>04</em>Tối ưu hóa các Chi phí được trừ</h3><ul><li>Sử dụng tối đa các định mức chi phí được trừ pháp luật thuế cho phép (hạn mức chi phí bảo hiểm, chi phí lãi vay…)</li><li>Hoàn thiện chứng từ cho các chi phí mà Công ty chưa ghi nhận được là chi phí được trừ thuế.</li></ul></div>
+    </div>
+    <div class="tk" id="t2">
+      <div class="tool"><h3><em>01</em>Tái cấu trúc Thu nhập và Chi phí</h3><ul><li>Thay đổi bản chất thu nhập để hưởng thuế suất ưu đãi</li><li>Phân bổ chi phí giữa các hoạt động có thuế suất khác nhau một cách tối ưu.</li></ul></div>
+      <div class="tool"><h3><em>02</em>Đánh giá hoạt động chuyển giá</h3><p>Tái cấu trúc giao dịch và sử dụng công cụ Chuyển giá để điều chuyển lợi nhuận trong phạm vi hợp lý, hợp lệ và có khả năng thuyết phục với cơ quan thuế.</p></div>
+      <div class="tool"><h3><em>03</em>Tái cấu trúc “Chia tách, Sáp nhập”</h3><ul><li>Chia tách</li><li>Sáp nhập</li><li>Chuyển đổi hình thức hoạt động</li><li>Thành lập các pháp nhân, thực thể mới</li></ul></div>
+      <div class="tool"><h3><em>04</em>Bộ công cụ và kỹ thuật khác</h3><ul><li>Tái cấu trúc sở hữu trong Hệ sinh thái</li><li>Thay đổi cấu trúc hợp đồng, giao dịch</li><li>Sử dụng các thực thể tại nước ngoài và các công cụ thuế liên quốc gia</li><li>V.v…</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIVITY -->
+<section class="creative">
+  <div class="box">
+    <img src="assets/towers.jpg" alt="">
+    <div class="inner rv">
+      <h2>Sự “Sáng Tạo” làm nên khác biệt trong dịch vụ của Glovie</h2>
+      <blockquote>“Tối ưu thuế tại Glovie không phải là áp công thức, mà là giải bài toán tổng thể bằng kinh nghiệm, kiến thức chuyên sâu và tư duy sáng tạo chiến lược, tạo nên năng lực khác biệt từ đội ngũ chuyên gia được tuyển chọn và phát triển có chủ đích.”</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="wrap">
+    <h2 class="rv">Cách thức tiếp cận dịch vụ</h2>
+    <p class="ap-intro rv">Đội ngũ chuyên gia tư vấn thuế &amp; quản trị doanh nghiệp của Glovie trưởng thành từ thực tế chuyên môn và từ các công ty tư vấn hàng đầu thế giới (Big 4, McKinsey, BCG…). Điểm khác biệt cốt lõi không nằm ở kinh nghiệm đơn thuần, mà ở <b>năng lực tư duy sáng tạo có kiểm soát</b>: vận dụng linh hoạt khung pháp lý hiện hành, kết nối đa lĩnh vực để thiết kế các phương án tối ưu thuế hiệu quả, thực chất và bền vững.</p>
+    <div class="ap-grid">
+      <div class="ap rv"><div class="icon">🛡️</div><h3>Chủ động phòng ngừa</h3><p>Đồng hành chủ động cùng Doanh nghiệp mà không đợi đến khi bị thanh tra mới xử lý.</p></div>
+      <div class="ap rv"><div class="icon">🧩</div><h3>Tiếp cận Đa chuyên môn</h3><p>Kết hợp luật – thuế – tài chính – chiến lược.</p></div>
+      <div class="ap rv"><div class="icon">✨</div><h3>Tuân thủ sáng tạo</h3><p>Am hiểu pháp luật, tối ưu nhưng vẫn “sạch”.</p></div>
+      <div class="ap rv"><div class="icon">🤝</div><h3>Đồng hành &amp; Hỗ trợ liên tục</h3><p>Đồng hành dài hạn, cập nhật chính sách real-time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="wrap">
+    <h2 class="rv">Đội ngũ của Glovie</h2>
+    <div class="member rv">
+      <div class="portrait"><div class="ph"><img src="assets/vinh.jpg" alt="Ông Trần Đức Vinh"></div><div class="dc"></div></div>
+      <div>
+        <h3>Ông Trần Đức Vinh</h3>
+        <div class="role">Đồng sáng lập &amp; Giám đốc Dịch vụ</div>
+        <p>Chuyên gia hàng đầu về thuế tại Việt Nam với <b>15 năm kinh nghiệm</b>, trong đó có nhiều năm làm chuyên gia tư vấn thuế tại Ernst &amp; Young, quản lý thuế cho toàn bộ Tập đoàn Vingroup và tái cấu trúc cho tập đoàn Masterise.</p>
+        <p style="margin-top:12px">Ông đã tư vấn tối ưu thuế cho các Doanh nghiệp, Tập đoàn hàng đầu Việt Nam cùng nhiều cá nhân, gia tộc giàu có — giúp khách hàng tiết kiệm hàng chục đến hàng trăm tỷ đồng tiền thuế mà vẫn tuân thủ triệt để pháp luật.</p>
+        <div class="brands"><b>Ernst &amp; Young</b><b>Vingroup</b><b>Masterise</b></div>
+        <div class="creds"><span>Thạc sỹ Tài chính Ngân hàng</span><span>Cử nhân Kế toán Kiểm toán – HV Ngân hàng</span><span>Hội viên kỳ cựu ACCA</span><span>Tiểu ban cố vấn Thuế &amp; Pháp luật ACCA</span><span>Thành viên VACPA</span></div>
+      </div>
+    </div>
+    <div class="member rev rv">
+      <div class="portrait"><div class="ph"><img src="assets/khue.jpg" alt="Ông Đoàn Trắc Khuê"></div><div class="dc"></div></div>
+      <div>
+        <h3>Ông Đoàn Trắc Khuê</h3>
+        <div class="role">Đồng sáng lập &amp; Giám đốc Vận hành</div>
+        <p><b>20 năm kinh nghiệm</b> trong Triển khai, Tư vấn, Vận hành, Phát triển Kinh doanh và Sản phẩm Dịch vụ ở các mảng Công nghệ, Giáo dục, Tài chính kế toán đến Fintech: Giám đốc Kinh doanh &amp; Tư vấn giải pháp BRAVO ERP, Founder Durham Education, Founder Wellbaby Spa &amp; Education, Co-founder Innosoft, Giám đốc Kinh doanh Nano Technologies (Vui App).</p>
+        <p style="margin-top:12px">Mang đến cách tiếp cận dựa trên hệ thống, dữ liệu, quy trình chuẩn hóa và giải pháp công nghệ hiện đại.</p>
+        <div class="creds"><span>Thạc sỹ Quản trị Kinh doanh</span><span>Cử nhân Hệ thống Thông tin Quản lý</span><span>Cử nhân Tin học Kinh tế</span><span>Chương trình CMA</span><span>Chương trình CFA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="half" style="width:160px;height:80px;bottom:0;right:4%"></div>
+  <div class="wrap rv">
+    <h2>Sẵn sàng “khám sức khỏe” <br>cho doanh nghiệp?</h2>
+    <p>GLOVIE – Giúp bạn tối ưu hàng tỷ đến hàng trăm tỷ đồng tiền thuế mà vẫn tuân thủ pháp luật triệt để.</p>
+    <a class="btn" href="tel:0936689388">Gọi ngay 0936 689 388</a>
+    <div class="contact-cards">
+      <a class="cc" href="tel:0936689388"><small>📞 Điện thoại</small><b>0936 689 388</b></a>
+      <a class="cc" href="mailto:khuedt@glovie.vn"><small>✉️ Email</small><b>khuedt@glovie.vn</b></a>
+      <a class="cc" href="https://www.glovie.vn" target="_blank" rel="noopener"><small>🌐 Website</small><b>www.glovie.vn</b></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b style="color:var(--ink)">Glovie Consulting JSC</b><br>Thynk Unlimited – Value Optimization</div>
+    <div>Prevent. Protect. Prosper.</div>
+    <div>© <span id="y"></span> Glovie Consulting</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const hd=document.querySelector('header');
+addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>10),{passive:true});
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+  const n=e.target.querySelector('[data-count]');if(n)count(n);}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+function count(el){const t=+el.dataset.count;let s=null;const f=ts=>{s=s||ts;const p=Math.min((ts-s)/1200,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)))+'%';if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+// tabs
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.p).classList.add('active')});
+document.querySelectorAll('.tk-switch button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tk-switch button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tk').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.t).classList.add('active')});
+</script>
+</body>
+</html>
