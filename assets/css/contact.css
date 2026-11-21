@@ -1,0 +1,31 @@
+/* ===== Contact v2: "Trao đổi riêng cùng Glovie" — call / email, no form ===== */
+.contact-grid{align-items:center}
+.talk-card{background:#fff;color:var(--ink);padding:40px 40px 34px;border-top:3px solid #ffa726;box-shadow:0 30px 70px rgba(3,14,24,.28)}
+.talk-card h3{font-family:'Playfair Display',var(--cjk-serif,Georgia),Georgia,serif;font-size:30px;font-weight:400;line-height:1.2;margin:0 0 10px;color:#0b2334}
+.talk-card .talk-lead{color:#5d6b74;font-size:15px;line-height:1.6;margin:0}
+.talk-person{display:flex;align-items:center;gap:14px;margin:24px 0 20px;padding:16px 0;border-top:1px solid #ece4d6;border-bottom:1px solid #ece4d6}
+.talk-person img{width:44px;height:42px;flex:none}
+.talk-person strong{display:block;font-size:16px;color:#0b2334}
+.talk-person span{display:block;font-size:13px;color:#5d6b74;margin-top:2px}
+.talk-actions{display:grid;gap:12px}
+.talk-btn{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid transparent;text-decoration:none!important;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.talk-btn:hover{transform:translateY(-1px)}
+.talk-btn:focus-visible{outline:2px solid #ffa726;outline-offset:3px}
+.talk-btn svg{width:26px;height:26px;flex:none}
+.talk-btn .talk-text{display:flex;flex-direction:column;min-width:0}
+.talk-btn .talk-label{font-size:16px;font-weight:600;line-height:1.3}
+.talk-btn .talk-value{font-size:14px;margin-top:2px;opacity:.85;overflow-wrap:anywhere}
+.talk-btn .talk-go{margin-left:auto;font-size:18px;line-height:1}
+.talk-call{background:#ffa726;color:#0b2334!important}
+.talk-call:hover{background:#ffb84d}
+.talk-mail{border-color:#0b2334;color:#0b2334!important}
+.talk-mail:hover{background:#0b2334;color:#fff!important}
+.talk-info{margin:24px 0 0;display:grid;gap:10px;font-size:14px}
+.talk-info div{display:grid;grid-template-columns:104px 1fr;gap:12px;align-items:baseline}
+.talk-info dt{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9a5d06}
+.talk-info dd{margin:0;color:#0b2334}
+.talk-info a{color:#0b2334;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:550px){.talk-card{padding:26px 22px 24px}.talk-card h3{font-size:25px}.talk-info div{grid-template-columns:1fr;gap:2px}}
+@media(prefers-reduced-motion:reduce){.talk-btn{transition:none}.talk-btn:hover{transform:none}}
+.talk-private{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:7px 14px 7px 11px;background:#fff4df;border:1px solid #f3d29a;color:#7a4a05;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:30px}
+.talk-private svg{width:16px;height:16px;flex:none}

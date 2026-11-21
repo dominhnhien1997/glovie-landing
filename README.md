@@ -1,10 +1,8 @@
 # Glovie – Website (bản song ngữ Việt–Anh)
 
-Website tĩnh do Glovie cung cấp, được deploy bằng GitHub Pages.
+Website tĩnh do Glovie cung cấp, deploy bằng GitHub Pages tại https://www.glovie.net
 
-- Trang: `index.html`, `soatxetthue.html`, `toiuuthue.html`, `tvtthuongxuyen.html`, `investorhub.html`, `ve-glovie.html`
+- Trang: `index.html`, `familytrack.html`, `soatxetthue.html`, `toiuuthue.html`, `tvtthuongxuyen.html`, `investorhub.html`, `ve-glovie.html`
 - Giao diện & nội dung: `assets/` (CSS, JavaScript, nội dung đa ngôn ngữ, hình ảnh)
-
-Lưu ý: thư mục `api/` (xử lý form liên hệ bằng PHP) **không** đưa lên repo này vì
-GitHub Pages không chạy được PHP và file cấu hình chứa thông tin nhận tin riêng tư.
-Form "Trao đổi riêng cùng Glovie" cần một dịch vụ nhận form hoặc hosting có PHP để hoạt động.
+- Liên hệ: nút gọi điện và gửi email (không có biểu mẫu, không cần máy chủ).
+- `CNAME`: tên miền riêng cho GitHub Pages.

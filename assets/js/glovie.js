@@ -26,6 +26,16 @@
       el.href = `mailto:${address}`;
       el.textContent = address;
     });
+    // Email buttons keep their label; the address is assembled the same way and shown in .talk-value.
+    $$('.js-mailto').forEach((el) => {
+      const user = (el.dataset.u || '').split('').reverse().join('');
+      const domain = (el.dataset.d || '').split('').reverse().join('');
+      if (!user || !domain) return;
+      const address = `${user}@${domain}`;
+      el.href = `mailto:${address}` + (el.dataset.subject ? `?subject=${encodeURIComponent(el.dataset.subject)}` : '');
+      const value = $('.talk-value', el);
+      if (value) value.textContent = address;
+    });
   }
 
   /* ---------- Mobile navigation ---------- */
@@ -114,7 +124,7 @@
     return Object.keys(I18N.html).find((k) => I18N.html[k] === html) || 'vi';
   };
 
-  /* ---------- Contact form: posts to the server-side handler; recipient never reaches the browser ---------- */
+  /* ---------- Contact form: posts to Google Sheets (Apps Script) or the PHP handler; the recipient never reaches the browser ---------- */
   const MESSAGES = {
     vi: { sending: 'Đang gửi…', ok: 'Cảm ơn bạn! Glovie đã nhận được tin nhắn và sẽ liên hệ lại sớm.', invalid: 'Vui lòng kiểm tra lại họ tên, email và nội dung.', rate: 'Bạn đã gửi nhiều lần trong thời gian ngắn. Vui lòng thử lại sau ít phút.', error: 'Chưa gửi được tin nhắn. Vui lòng thử lại hoặc gọi hotline.' },
     en: { sending: 'Sending…', ok: 'Thank you! Glovie has received your message and will be in touch soon.', invalid: 'Please check your name, email and message.', rate: 'Too many messages in a short time. Please try again in a few minutes.', error: 'Your message could not be sent. Please try again or call our hotline.' },
@@ -146,20 +156,27 @@
       const controller = new AbortController();
       const timer = window.setTimeout(() => controller.abort(), 15000);
       try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'X-Requested-With': 'XMLHttpRequest', Accept: 'application/json' },
-          credentials: 'same-origin',
-          signal: controller.signal,
-        });
+        // GitHub Pages (static hosting): posts to a Google Apps Script web app set in assets/js/form-config.js.
+        // Other hosting: falls back to the PHP handler in the form's action.
+        const cfg = window.GLOVIE_FORM || {};
+        const endpoint = /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(cfg.endpoint || '') ? cfg.endpoint : '';
+        const response = endpoint
+          ? await fetch(endpoint, { method: 'POST', body: new URLSearchParams(new FormData(form)), credentials: 'omit', redirect: 'follow', signal: controller.signal })
+          : await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'X-Requested-With': 'XMLHttpRequest', Accept: 'application/json' },
+            credentials: 'same-origin',
+            signal: controller.signal,
+          });
         const data = await response.json().catch(() => ({}));
         if (response.ok && data.ok) {
           form.reset();
           if (ts) ts.value = String(Date.now());
           say('ok', 'success');
         } else {
-          say(response.status === 429 ? 'rate' : response.status === 422 ? 'invalid' : 'error', 'error');
+          const code = data.code || (response.status === 429 ? 'rate' : response.status === 422 ? 'invalid' : 'error');
+          say(code === 'rate' || code === 'invalid' ? code : 'error', 'error');
         }
       } catch {
         say('error', 'error');

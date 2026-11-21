@@ -1,0 +1,29 @@
+/* Family Track — page-specific styles, built on glovie.min.css tokens */
+.ft-risks{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #d9d4cc;border-left:1px solid #d9d4cc}
+.ft-risks li{display:flex;gap:22px;padding:28px 30px;border-right:1px solid #d9d4cc;border-bottom:1px solid #d9d4cc;background:#fff}
+.ft-risks li b{font-family:'Playfair Display',var(--cjk-serif,Georgia),Georgia,serif;font-size:26px;font-weight:500;color:#b8730f;line-height:1;min-width:38px}
+.ft-risks h3{margin:0 0 8px;font-size:18px}
+.ft-risks p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.ft-stage{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#9a5d06;font-weight:600;margin-bottom:6px}
+.ft-for{background:var(--cream)}
+.ft-for-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:2px solid var(--navy)}
+.ft-for-grid article{padding:26px 24px 8px 0}
+.ft-for-grid article+article{padding-left:24px;border-left:1px solid var(--line)}
+.ft-for-grid h3{font-size:18px;margin:0 0 10px}
+.ft-for-grid p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.ft-trust .question{display:flex;gap:14px}
+.ft-trust .question span{line-height:1.55}
+.ft-trust .question b{font-family:'Playfair Display',var(--cjk-serif,Georgia),Georgia,serif;font-size:15px;min-width:26px;padding-top:2px;color:#9a5d06}
+.ft-faq{background:#fff}
+.ft-faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.ft-faq-list{border-top:1px solid var(--line)}
+.ft-faq details{border-bottom:1px solid var(--line);padding:0}
+.ft-faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-size:17px;font-weight:500;color:var(--navy);position:relative}
+.ft-faq summary::-webkit-details-marker{display:none}
+.ft-faq summary::after{content:'+';position:absolute;right:6px;top:18px;font-size:24px;color:#b8730f;font-weight:300;transition:transform .2s}
+.ft-faq details[open] summary::after{transform:rotate(45deg)}
+.ft-faq details p{margin:0 0 22px;color:var(--muted);line-height:1.7;max-width:62ch}
+.ft-faq summary:focus-visible{outline:2px solid #ffa726;outline-offset:4px}
+@media (max-width:980px){.ft-for-grid{grid-template-columns:repeat(2,1fr)}.ft-for-grid article:nth-child(3){padding-left:0;border-left:0}.ft-faq-grid{grid-template-columns:1fr;gap:24px}}
+@media (max-width:700px){.ft-risks{grid-template-columns:1fr}.ft-risks li{padding:22px 20px}.ft-for-grid{grid-template-columns:1fr}.ft-for-grid article,.ft-for-grid article+article{padding:22px 0 6px;border-left:0;border-bottom:1px solid var(--line)}}
+@media (prefers-reduced-motion:reduce){.ft-faq summary::after{transition:none}}
